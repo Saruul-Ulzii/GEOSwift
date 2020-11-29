@@ -855,7 +855,7 @@ final class GeometryConvertible_GEOSTests: XCTestCase {
             do {
                 _ = try geometry.buffer(by: 0.5)
             } catch {
-                XCTFail("Unexpected error for \(geometry) buffer(by: 10) \(error)")
+                XCTFail("Unexpected error for \(geometry) buffer(by: 0.5) \(error)")
             }
         }
     }
