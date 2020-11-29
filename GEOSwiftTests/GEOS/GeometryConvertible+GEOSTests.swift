@@ -211,11 +211,11 @@ final class GeometryConvertible_GEOSTests: XCTestCase {
     func testIsValidReason() throws {
         let validPoint = Point(x: 0, y: 0)
 
-        try print(validPoint.isValidReason())
+        XCTAssertEqual(try validPoint.isValidReason(), "Valid Geometry")
 
         let invalidPoint = Point(x: .nan, y: 0)
 
-        try print(invalidPoint.isValid())
+        XCTAssertEqual(try invalidPoint.isValidReason(), "Invalid Coordinate[nan 0]")
     }
 
     func testIsValidReasonAllTypes() {
